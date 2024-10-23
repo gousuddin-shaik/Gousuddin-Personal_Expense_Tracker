@@ -1,0 +1,41 @@
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+    id: 5,
+    type: 'expense',
+    category: 1,
+    amount: 3000,
+    date: 2024-10-20,
+    description: "Spent for household activities"
+}
+
+###
+
+GET http://localhost:3000/transactions
+
+###
+
+GET http://localhost:3000/transactions/5
+
+###
+
+PUT http://localhost:3000/transactions/5
+Content-Type: application/json
+
+{
+    id: 5,
+    type: 'expense',
+    category: 1,
+    amount: 5000,
+    date: 2024-10-20,
+    description: "Spent for household activities"
+}
+
+###
+
+DELETE http://localhost:3000/transactions/5
+
+###
+
+GET http://localhost:3000/summary
